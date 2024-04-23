@@ -28,6 +28,20 @@ composer install
 ## Configuração
 Antes de iniciar a API, configure as variáveis de ambiente, incluindo sua chave de API da OpenAI (`OPEN_IA_KEY`), no arquivo `.env`.
 
+## Validação de Domínio
+
+Para garantir a segurança da API, você pode especificar os domínios que têm permissão para acessar a API. Isso é feito através da constante `DOMAINS` no arquivo de configuração principal. Aqui está um exemplo de como definir os domínios permitidos:
+
+```php
+define('DOMAINS', [
+    '*',
+    '127.0.0.1',
+    'localhost',
+    'http://localhost:8081',
+    'domain.com',
+    'sub.domain.com'
+]);
+
 ## Uso
 A API possui duas rotas principais:
 
