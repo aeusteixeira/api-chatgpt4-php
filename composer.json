@@ -1,8 +1,8 @@
 {
-    "name": "conta/api",
+    "description": "API PHP para interações dinâmicas com o ChatGPT-4 da OpenAI.",
     "autoload": {
         "psr-4": {
-            "App\\": "src/"
+            "App\\": "src/app"
         }
     },
     "authors": [
