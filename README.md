@@ -54,6 +54,21 @@ curl -X POST http://localhost:8000/questions/respond -H "Content-Type: applicati
 }
 ```
 
+### POST `/questions/image`
+Aceita uma pergunta e uma URL de imagem em formato JSON e retorna a resposta do modelo GPT-4.
+
+#### Exemplo de Requisição
+```
+curl -X POST http://localhost:8000/questions/image -H "Content-Type: application/json" -d '{"question": "O que representa esta imagem?", "image": "https://cdn-icons-png.flaticon.com/512/25/25231.png"}'
+```
+
+#### Resposta Esperada
+```json
+{
+  "response": "Logo do GitHub."
+}
+```
+
 ## Contribuição
 Contribuições para melhorar a API são sempre bem-vindas. Se você tem sugestões de melhorias ou correções, por favor, faça um fork do repositório, faça suas alterações, e submeta um pull request.
 
