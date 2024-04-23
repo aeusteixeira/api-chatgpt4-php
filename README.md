@@ -41,6 +41,9 @@ define('DOMAINS', [
     'domain.com',
     'sub.domain.com'
 ]);
+```
+
+A constante `DOMAINS` é usada pelo middleware `ValidateDomainMiddleware` para verificar se o domínio ou IP da solicitação está na lista de origens permitidas. Se o caractere '*' estiver presente na lista, qualquer domínio poderá acessar a API.
 
 ## Uso
 A API possui duas rotas principais:
@@ -57,7 +60,7 @@ curl http://localhost:8000/questions
 Aceita uma pergunta em formato JSON e retorna a resposta do modelo GPT-4.
 
 #### Exemplo de Requisição
-```
+``` 
 curl -X POST http://localhost:8000/questions/respond -H "Content-Type: application/json" -d '{"question": "Explique o teorema de Bayes."}'
 ```
 
@@ -72,7 +75,7 @@ curl -X POST http://localhost:8000/questions/respond -H "Content-Type: applicati
 Aceita uma pergunta e uma URL de imagem em formato JSON e retorna a resposta do modelo GPT-4.
 
 #### Exemplo de Requisição
-```
+``` 
 curl -X POST http://localhost:8000/questions/image -H "Content-Type: application/json" -d '{"question": "O que representa esta imagem?", "image": "https://cdn-icons-png.flaticon.com/512/25/25231.png"}'
 ```
 
